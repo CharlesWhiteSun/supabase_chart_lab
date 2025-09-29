@@ -1,0 +1,16 @@
+duration: 86400 # 24 hours in seconds
+devices:
+  - id: PLC_001
+    voltage_range: [210.0, 230.0]
+    current_range: [5.0, 10.0]
+    delay: 0.5
+
+  - id: PLC_002
+    voltage_range: [200.0, 220.0]
+    current_range: [4.0, 8.0]
+    delay: 1.0
+
+  - id: PLC_003
+    voltage_range: [205.0, 240.0]
+    current_range: [4.0, 10.0]
+    delay: 1.5

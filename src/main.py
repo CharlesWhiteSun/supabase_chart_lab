@@ -1,5 +1,5 @@
-from supabase_chart_lab.app.config import load_config
-from supabase_chart_lab.app.device_reader import read_multiple_devices
+from src.app.config import load_config
+from src.app.device_reader import read_multiple_devices
 
 
 if __name__ == "__main__":

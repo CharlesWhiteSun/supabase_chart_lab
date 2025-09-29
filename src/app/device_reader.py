@@ -1,6 +1,6 @@
 import time
 from typing import Dict, List
-from supabase_chart_lab.app.device_generator import generate_device_data
+from src.app.device_generator import generate_device_data
 
 
 def read_multiple_devices(config: Dict, duration: float) -> List[Dict]:

@@ -1,6 +1,6 @@
 import datetime
 from concurrent.futures import ThreadPoolExecutor
-from supabase_chart_lab.call.api import post_plc
+from src.call.api import post_plc
 
 # 建立 ThreadPoolExecutor，固定最大執行緒數
 MAX_WORKERS = 3

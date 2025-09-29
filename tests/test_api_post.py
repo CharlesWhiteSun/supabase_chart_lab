@@ -1,7 +1,9 @@
 import requests
 import datetime
 
+
 BASE_URL = "http://127.0.0.1:9000"
+
 
 def test_post_plc_status():
     url = f"{BASE_URL}/plc"
@@ -22,3 +24,7 @@ def test_post_plc_status():
     assert data["status"] == "success"
 
     print("✅ POST /plc 測試成功，status:", data["status"])
+
+
+if __name__ == "__main__":
+    test_post_plc_status()

@@ -5,6 +5,7 @@ import sys
 from plc_reader.libs.client_connector import connect_plc
 from plc_reader.libs.signal_reader import read_light_data
 from plc_reader.libs.signal_analyzer import analyze_light_data, print_light_data
+from plc_reader.libs.api_caller import async_api_call
 
 running = True
 
@@ -23,6 +24,7 @@ def main():
         light_sec, coils_y = read_light_data(c)
         result = analyze_light_data(light_sec, coils_y)
         print_light_data(result)
+        async_api_call() # 非同步呼叫 API
         time.sleep(1)
 
     if c.is_open:

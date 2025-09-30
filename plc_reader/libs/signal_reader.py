@@ -1,4 +1,4 @@
-ADDRESS = 0x1000        # Holding Register 起始地址
+ADDRESS = 0x1005        # Holding Register 起始地址
 NUMBERS = 3             # 讀取數量
 PLC_Type = "12SE"       # "12SE" or "26SE"
 COILS_Y_12SE = 0x513    # Y23, Y24, Y25

@@ -5,13 +5,19 @@ def analyze_light_data(light_sec, coils_y):
         "yellow_sec": None,
         "red_sec": None,
         "current_light": None,
-        "errors": []
+        "errors": [],
+        
+        "voltage": None,
+        "current": None
     }
 
     if light_sec:
         result["green_sec"] = light_sec[0] / 10
         result["yellow_sec"] = light_sec[1] / 10
         result["red_sec"] = light_sec[2] / 10
+
+        result["voltage"] = 220 # 模擬電壓
+        result["current"] = 5   # 模擬電流
     else:
         result["errors"].append("⚠️ PLC 資料讀取失敗")
 
@@ -32,7 +38,7 @@ def analyze_light_data(light_sec, coils_y):
 def print_light_data(data):
     """將分析結果印出"""
     if data["green_sec"] is not None:
-        print(f"綠燈秒數: {data['green_sec']} 秒, 黃燈秒數: {data['yellow_sec']} 秒, 紅燈秒數: {data['red_sec']} 秒")
+        print(f"綠燈: {data['green_sec']} 秒, 黃燈: {data['yellow_sec']} 秒, 紅燈: {data['red_sec']} 秒, 電壓: {data['voltage']} V, 電流: {data['current']} A")
 
     if data["current_light"]:
         print(f"目前燈號: {data['current_light']}")
